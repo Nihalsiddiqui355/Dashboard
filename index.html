@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="main-nav">
+        <div class="nav-left">
+         <div class="close-toggle" onclick="toggleSidebar()">☰</div>
+        <div class="menu-toggle" onclick="toggleSidebar()">✕</div>
+        <div class="Logo"><a href="#"><img src="/assets/Logo.png" alt="LOGO_HERE"></a></div>
+        </div>
+        <ul class="nav-right">
+            <li><span class="material-symbols-outlined">Notifications</span></li>
+            <li class="profile"><img src="./assets/profile-img.avif" alt="profile_logo"></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <ul id="sidebar-list">
+                <li data-section="dashboard" onclick="showContent('dashboard')"><span class="material-symbols-outlined">Dashboard</span>Dashboard</li>
+                <li data-section="courses" onclick="showContent('courses')"><span class="material-symbols-outlined">menu_book</span>Courses</li>
+                <li data-section="fees" onclick="showContent('fees')"><span class="material-symbols-outlined">payments</span>Fees Management</li>
+                <li data-section="applications" onclick="showContent('applications')"><span class="material-symbols-outlined">description</span>Applications</li>
+                <li data-section="activities" onclick="showContent('activities')"><span class="material-symbols-outlined">show_chart</span>Activities</li>
+                <li data-section="attendance" onclick="showContent('attendance')"><span class="material-symbols-outlined">check_box</span>Attendance</li>
+                <li data-section="calender" onclick="showContent('calender')"><span class="material-symbols-outlined">calendar_month</span>calender</li>
+                <li data-section="grades" onclick="showContent('grades')"><span class="material-symbols-outlined">book</span>Grades</li>
+                <li data-section="daily-records" onclick="showContent('daily-records')"><span class="material-symbols-outlined">note_alt</span>Daily Records</li>
+                <li data-section="warnings-notifications" onclick="showContent('warnings-notifications')"><span class="material-symbols-outlined">warning</span>Warnings and Notifications</li>
+                <li data-section="progress-reports" onclick="showContent('progress-reports')"><span class="material-symbols-outlined">monitoring</span>Progress Tracking and Reports</li>
+                <li data-section="full-profile" onclick="showContent('full-profile')"><span class="material-symbols-outlined">person</span>Full Profile</li>
+                <li data-section="timer" onclick="showContent('timer')"><span class="material-symbols-outlined">schedule</span>Timer (Timestamp)</li>
+                <li data-section="pending-work" onclick="showContent('pending-work')"><span class="material-symbols-outlined">work_history</span>Pending Work</li>
+                <li data-section="logout" onclick="showContent('logout')"><span class="material-symbols-outlined">logout</span>Logout</li>
+            </ul>
+            
+        </div>
+        <div class="content" id="content">
+            <!-- Content will be dynamically updated here -->
+            <h1>Home</h1>
+        </div>
+    </div>
+ <script src="script.js"   async></script>
+    
+</body>
+
+</html>

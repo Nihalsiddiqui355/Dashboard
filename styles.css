@@ -1,0 +1,192 @@
+/* Root Variables */
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --background-color: #f8f9fa;
+  --primary-color: #black;
+  --secondary-color: white;
+  --text-color: black;
+  --text-color-light: #9ea;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navigation */
+
+#main-nav{
+  display: block;
+  /* border: 2px solid red; */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #8a8b8b;
+  background-color: var(--secondary-color);
+  padding: 10px 50px 50px 20px;
+}
+
+.nav-right{
+  /* border: 2px solid red; */
+  float: right;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+}
+.profile img{
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  top: -15px;
+  cursor: pointer;
+}
+
+ .nav-left{
+  float: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.Logo > a > img{
+  border: 1px solid rgb(198, 196, 196);
+  width: 100px;
+}
+
+
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: var(--secondary-color);
+  color: var;
+  overflow-x:hidden;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 10px;
+  text-align: start;
+  border-radius: 10px;
+}
+
+.sidebar li:hover {
+  color: var(--text-color);
+}
+
+.sidebar li.active {
+  border: 1px solid rgb(214, 214, 214);
+  background-color: #d3d3d3;
+  margin: 1px;
+}
+
+.sidebar li span {
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+
+
+
+/* List End here */
+
+/* Conatent Start */
+
+.content {
+  /* width: 80%; */
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--text-color-light)
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+
+
+/* Hamburger Menu */
+.menu-toggle, .close-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  color: #111;
+  display: none;
+}
+.menu-toggle, .close-toggle {
+  display: none;
+}
+.sidebar {
+  width: 20%;
+  background-color: var(--secondary-color);
+  color: var(--text-color); 
+  overflow-y: auto;
+  margin:0 20px;
+  
+}
+
+@media (max-width: 768px) {
+
+
+
+  .container {
+    flex-direction: row;
+    width: calc(100%)
+  }
+
+  .sidebar{
+    width: 43%;
+  }
+  .sidebar-open .sidebar {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    overflow-y: hidden;
+  }
+
+  .menu-toggle, .close-toggle{
+    border: 1px solid rgb(197, 182, 182);
+    width: fit-content;
+    padding: 1px 5px;
+    margin: 0px 20px 0 20px;
+    border-radius: 10px;
+  }
+
+  .menu-toggle, .close-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #111;
+  }
+  
+  .container .sidebar-open .sidebar {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .content {
+    width: calc(100%);
+  }
+}
